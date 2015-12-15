@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
+    "test:watch": "npm run test -- --watch --watch-extensions jsx",
     "lint": "eslint -c .eslintrc src",
     "lint:test": "eslint -c .eslintrc test",
     "pretest": "npm run lint"
@@ -19,9 +20,9 @@
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
-    "jsdom": "^7.2.1",
     "mocha": "^2.3.4",
     "react-hot-loader": "^1.3.0",
+    "testdom": "^2.0.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
