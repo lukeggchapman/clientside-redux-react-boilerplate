@@ -1,0 +1,28 @@
+env:
+  node: true
+  mocha: true
+  es6: true
+
+ecmaFeatures:
+  modules: true
+
+rules:
+  comma-style: [2, "last"]
+  default-case: 2
+  func-style: [2, "declaration"]
+  guard-for-in: 2
+  no-floating-decimal: 2
+  no-nested-ternary: 2
+  radix: 2
+  space-after-keywords: [2, "always"]
+  space-before-blocks: 2
+  spaced-comment: [2, "always", { exceptions: ["-"]}]
+  strict: [2, "global"]
+  valid-jsdoc: [2, { prefer: { "return": "returns"}}]
+  wrap-iife: 2
+  quotes: [2, "single"]
+  no-multi-spaces: 2
+  curly: 2
+  no-underscore-dangle: 2
+  no-new: 2
+  no-extra-parens: 2
