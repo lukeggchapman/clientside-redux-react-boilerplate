@@ -5,11 +5,12 @@ env:
 
 ecmaFeatures:
   modules: true
+  jsx: true
 
 rules:
   comma-style: [2, "last"]
   default-case: 2
-  func-style: [2, "declaration"]
+  func-style: [2, "declaration", { "allowArrowFunctions": true }]
   guard-for-in: 2
   no-floating-decimal: 2
   no-nested-ternary: 2
