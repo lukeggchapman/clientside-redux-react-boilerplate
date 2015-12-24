@@ -66,11 +66,12 @@ describe('reducer', () => {
     }));
   });
 
-  it('handles VOTE by setting hasVoted', () => {
+  it('handles VOTE by setting myVote', () => {
     const state = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        tally: {Trainspotting: 1}
+        tally: {Trainspotting: 1},
+        round: 1
       }
     });
     const action = {type: 'VOTE', entry: 'Trainspotting'};
@@ -79,17 +80,22 @@ describe('reducer', () => {
     expect(newState).to.equal(fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        tally:{Trainspotting: 1}
+        tally: {Trainspotting: 1},
+        round: 1
       },
-      hasVoted: 'Trainspotting'
+      myVote: {
+        entry: 'Trainspotting',
+        round: 1
+      }
     }));
   });
 
-  it('does not set hasVoted for VOTE on invalid entry', () => {
+  it('does not set myVote for VOTE on invalid entry', () => {
     const state = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        tally: {Trainspotting: 1}
+        tally: {Trainspotting: 1},
+        round: 1
       }
     });
     const action = {type: 'VOTE', entry: 'Sunshine'};
@@ -98,18 +104,22 @@ describe('reducer', () => {
     expect(nextState).to.equal(fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
-        tally: {Trainspotting: 1}
+        tally: {Trainspotting: 1},
+        round: 1
       }
     }));
   });
 
-  it('removes hasVoted on SET_STATE if pair changes', () => {
+  it('removes myVote on SET_STATE if pair changes', () => {
     const initialState = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
         tally:{Trainspotting: 1}
       },
-      hasVoted: 'Trainspotting'
+      myVote: {
+        entry: 'Trainspotting',
+        round: 1
+      }
     });
     const action = {
       type: 'SET_STATE',
