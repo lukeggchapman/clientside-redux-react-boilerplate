@@ -8,20 +8,26 @@
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
     "lint": "eslint -c .eslintrc src",
     "lint:test": "eslint -c .eslintrc test",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "dist": "NODE_ENV=production webpack -p --progress"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "assets-webpack-plugin": "^3.2.0",
+    "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
+    "css-loader": "^0.23.1",
     "mocha": "^2.3.4",
     "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
     "testdom": "^2.0.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
