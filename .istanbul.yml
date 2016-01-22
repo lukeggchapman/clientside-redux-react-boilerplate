@@ -1,0 +1,13 @@
+instrumentation:
+  root: src
+  extensions:
+    - .jsx
+    - .js
+
+check:
+  each:
+    statements: 100
+    lines: 100
+    branches: 90
+    functions: 75
+    excludes: []
