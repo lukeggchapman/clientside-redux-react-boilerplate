@@ -1,5 +1,5 @@
 --compilers js:babel-core/register
---require ./test/test_helper.js
+--require ./test/testHelper.js
 --recursive
 --reporter spec
 test/**/*.@(js|jsx)
