@@ -5,6 +5,7 @@ import {setClientId, setState} from './actionCreators';
 import getClientId from './clientId';
 import configureStore from './store/configureStore';
 import Root from './components/Root';
+import './styles/main.scss';
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
 socket.on('state', state =>
