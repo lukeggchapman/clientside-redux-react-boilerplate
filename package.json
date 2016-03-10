@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server",
     "test": "mocha",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
     "lint": "eslint -c .eslintrc src",
