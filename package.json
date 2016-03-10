@@ -10,6 +10,7 @@
     "lint": "eslint -c .eslintrc src",
     "lint:test": "eslint -c .eslintrc test",
     "pretest": "npm run lint",
+    "predist": "npm run test",
     "dist": "NODE_ENV=production webpack -p --progress",
     "coverage": "babel-node ./node_modules/.bin/isparta cover --include '**/*.js' --include '**/*.jsx' _mocha",
     "postcoverage": "istanbul check-coverage --config=.istanbul.yml"
